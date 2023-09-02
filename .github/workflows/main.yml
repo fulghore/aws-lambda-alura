@@ -19,3 +19,31 @@ jobs:
           aws_region: ${{ secrets.AWS_REGION }}
           function_name: primeiraFuncao
           zip_file: deployment.zip
+{
+    "Version": "2012-10-17",
+
+    "Statement": [
+
+        {
+
+            "Action": [
+
+                "lambda:GetFunction",
+
+                "lambda:GetFunctionConfiguration"
+
+            ],
+
+            "Resource": [
+
+                "*"
+
+            ],
+
+            "Effect": "Allow"
+
+        }
+
+    ]
+
+}
